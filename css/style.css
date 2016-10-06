@@ -1,0 +1,899 @@
+
+@font-face{
+	font-family: RobotoSlabRegular;
+	src: url("../fonts/RobotoSlab-Regular.ttf");
+}
+@font-face{
+	font-family: RobotoBold;
+	src: url("../fonts/Roboto-Bold.ttf");
+}
+@font-face{
+	font-family: RobotoMedium;
+	src: url("../fonts/Roboto-Medium.ttf");
+}
+@font-face{
+	font-family: RobotoSlabLight;
+	src: url("../fonts/RobotoSlab-Light.ttf");
+}
+@font-face{
+	font-family: Roboto;
+	src: url("../fonts/RobotoRegular.ttf");
+}
+@font-face{
+	font-family: Lato;
+	src: url("../fonts/Lato-Regular.ttf");
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	outline: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+html{
+	height: 100%;
+}
+body{
+	height: 100%;
+	background-color: #FFF;
+	font-family: 'Roboto', sans-serif;
+	min-width: 1200px;
+}
+
+a, a:hover{
+	text-decoration: none;
+}
+
+ol,ul{
+	list-style: none;
+}
+
+.clearfix:before,
+.clearfix:after{
+	content: " ";
+	display: table;
+}
+.clearfix:after{
+	clear: both;
+}
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+.container{
+	min-width: 1070px;
+	width: 1070px;
+	margin: 0 auto;
+	position: relative;
+}
+.nav{
+
+	float: left;
+
+}
+#layer{
+	z-index: 1000;
+	height: 100%;
+	width: 100%;
+	position: fixed;	
+	display: none;
+}
+.red-layer{
+	z-index: 1001;
+	height: 100%;
+	width: 1070px;
+	margin: 0 auto;
+	background-color: rgba(255,0,0,0.2);
+
+}
+
+#header{
+	position: fixed;
+	top:0;
+	left: 0;
+	right:0;
+	width: 100%;
+	/* padding:  0; */
+	background: #2579bf; /* Для старых браузров */
+	z-index: 1000;
+
+}
+.nav>li>a{
+	display: inline-block;
+	padding: 10px 29px;
+	color: #FFF;
+	font-size: 16px;
+}
+.nav>li>a:hover {
+	text-decoration: underline;
+}
+.nav li{
+	float: left;
+}
+
+#home{
+	height: 740px;
+	background-image: url("../images/home-bg.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	padding-top: 100px;
+	z-index: 500;
+}
+.go_top{
+	position:fixed;
+	left:10px;
+	width:35px;
+	height:35px;
+	border-radius:50%;
+	background:rgba(4,4,4,0.15) url('../images/top.png') no-repeat 5px 8px;
+	border:1px solid #fff;
+	top:50%;
+	cursor:pointer;
+	z-index: 1000;	
+}
+#home .caption{	
+	background-image: url("../images/home-round.png");
+	width: 567px;
+	height: 500px;
+	background-position: 0 0;
+	background-size: 100%;
+	margin-top: 100px;
+	padding-top: 30px;
+}
+.logo{
+	background-image: url("../images/logo_long.png");
+	width: 271px;
+	height: 75px; 
+	/* position: absolute;
+	top: 0px;
+	right: 0;
+	left: 0; */
+	margin: 0 auto;
+	margin-top: 30px;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	z-index: 1;
+}
+h1{
+	margin: 0 auto;
+	padding-top: 30px;
+	display: block;
+	/* width: 400px; */
+	text-align: center;
+	font-family: RobotoSlabLight;
+	text-transform: uppercase;
+	font-size: 40px;
+	line-height: 54px;
+	color: #122f48;
+	font-weight: 900;
+}
+
+.stars{
+	margin: 20px auto;
+	width: 178px;
+	height: 39px;
+	background-image: url("../images/stars.png");
+}
+.download-button, .send-button{
+	display: block;
+	margin: 0 auto;
+	background-color: linear-gradient(to bottom, #1660a6, #0b4378);	
+	border-radius: 5px;
+	background-image: -moz-linear-gradient( -90deg, rgb(22,96,166) 0%, rgb(11,67,120) 100%);
+	background-image: -webkit-linear-gradient( -90deg, rgb(22,96,166) 0%, rgb(11,67,120) 100%);
+	background-image: -ms-linear-gradient( -90deg, rgb(22,96,166) 0%, rgb(11,67,120) 100%);
+	box-shadow: 0px 8px 12px 0px rgba(40, 47, 57, 0.35);
+	width: 260px;
+	height: 58px;
+	font-family: 'RobotoBold';
+	font-size: 20px;
+	text-align: center;
+	line-height: 60px;
+	color: #ffffff;
+	cursor: pointer;
+}
+.download-button:active, .send-button:active{
+	box-shadow: none;
+}
+
+.contact-info{
+	position: absolute;
+	right: 0;
+	top: -100px;
+	color: #122f48;
+	width: 352px;
+}
+
+.call-caption {
+	font: 26px Roboto;
+	text-align: right;
+}
+
+.company_phone {
+	font-family:RobotoMedium;
+	font-size:  43px;
+	line-height: 50px;
+}
+.section-1{
+	height: 250px;
+	padding-top: 50px;
+}
+.product-caption{
+	text-align: center;
+	font-size: 36px;
+	font-family: "RobotoSlabLight";
+}
+.product-description{
+	display: block;
+	text-align: center;
+	font-size: 18px;
+	font-family: "Roboto";
+	line-height: 24px;
+	width: 950px;
+	margin: 0 auto;
+	padding-top: 20px
+}
+.kolosok{
+	background-image: url("../images/kolosok.jpg");
+	position: absolute;
+	left: -154px;
+	top: 30px;
+	width: 280px;
+	height: 550px;
+	background-repeat: no-repeat;
+	z-index: -1;
+}
+.type-of-product
+{
+	width: 100%;
+	height: 90px;
+	border-radius: 5px;
+	background-image: -moz-linear-gradient( -90deg, rgba(22,96,166,0.3) 0%, rgba(11,67,120,0.1) 100%);
+	background-image: -webkit-linear-gradient( -90deg, rgba(22,96,166,0.3) 0%, rgba(11,67,120,0.1) 100%);
+	background-image: -ms-linear-gradient( -90deg, rgba(22,96,166,0.3) 0%, rgba(11,67,120,0.1) 100%);
+	margin-bottom: 10px;
+	-webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.type-of-product:hover{
+	background-image: -moz-linear-gradient( -90deg, rgba(22,96,166,0.5) 0%, rgba(11,67,120,0.15) 100%);
+	background-image: -webkit-linear-gradient( -90deg, rgba(22,96,166,0.5) 0%, rgba(11,67,120,0.15) 100%);
+	background-image: -ms-linear-gradient( -90deg, rgba(22,96,166,0.5) 0%, rgba(11,67,120,0.15) 100%);
+
+}
+.opened{
+	background-image: -moz-linear-gradient( -90deg, rgba(22,96,166,0.3) 0%, rgba(11,67,120,0.0) 100%);
+	background-image: -webkit-linear-gradient( -90deg, rgba(22,96,166,0.3) 0%, rgba(11,67,120,0.0) 100%);
+	background-image: -ms-linear-gradient( -90deg, rgba(22,96,166,0.3) 0%, rgba(11,67,120,0.0) 100%);
+}
+.item{
+	float: left;
+	margin-left: 18.3px;
+	border-width: 1px;
+	width: 163px;
+	height: 234px;
+	z-index: 421;
+}
+
+.item:nth-child(6n-5){
+	margin-left: 0;
+}
+
+.type-of-product p{
+	font-family: RobotoBold;
+	font-size: 24px;
+	color: rgb(18, 47, 72);
+	font-weight: bold;
+	line-height: 3.5;
+	text-align: center;
+	cursor: pointer;
+	padding-top: 5px;
+}
+
+.photo{
+	background-color: rgb(255, 255, 255);
+	width: 163px;
+	height: 162px;
+}
+.item-description{
+	display: block;
+	font-size: 16px;
+	font-family: "Roboto";
+	color: rgb(18, 47, 72);
+	line-height: 18px;
+	text-align: center;
+	padding-top: 12px;
+}
+
+.list-with-button{
+	position: relative;
+	margin-bottom: 70px;
+	display: none;
+	overflow: hidden;
+}
+#muki-list{
+	display: block;
+}
+.list-height-1{
+	height: 314px;
+}
+.list-height-2{
+	height: 548px;
+}
+.list-height-3{
+	height: 782px;
+}
+.products .items{
+	height: 
+}
+.items-1{
+	height: 234px;
+}
+.items-2{
+	height:468px;
+}
+.items-3{
+	height: 702px;
+}
+#work-with-us{
+	margin-top: 93px;
+	background-image: url("../images/work-with-me-bg.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 491px;
+	z-index: 1;
+}
+#work-with-us .caption{
+	font-size: 36px;
+	font-family: "RobotoSlabRegular";
+	color: rgb(18, 47, 72);
+	line-height: 40px;
+	text-align: center;  
+	padding-top: 149px;
+	padding-bottom: 65px;
+}
+#work-with-us .description{
+	font-size: 21px;
+	font-family: "Roboto";
+	color: rgb(18, 47, 72);
+	line-height: 30px;
+	text-align: center;
+}
+#how-work{
+	background-image: url("../images/how-work-bg.jpg");
+	height: 505px;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+#how-work .caption{
+	font-size: 36px;
+	font-family: RobotoSlabRegular;
+	color: rgb(255, 255, 255);
+	line-height: 40px;
+	text-align: center; 
+	padding-top: 62px;
+}
+.steps p{
+	font-size: 18px;
+	font-family: "Roboto";
+	color: rgb(255, 255, 255);
+	line-height: 24px;
+	text-align: center; 
+	display: inline-block;
+	float: left;
+	margin-top: 250px;
+}
+p.step-one{
+	margin-left: 5px;
+	width: 234px;
+	height: 38px;
+}
+
+p.step-two{
+	margin-left: 47px;
+	width: 227px;
+	height: 79px;
+}
+p.step-three{
+	margin-left: 65px;
+	width: 211px;
+	height: 105px;
+}
+
+
+p.step-four{
+	margin-left: 70px;
+	width: 211px;
+	height: 105px;
+}
+#sale{
+	height: 505px;			
+}
+.form-caption{
+	display: block;
+	font-size: 21px;
+	font-family: "Roboto";
+	color: rgb(18, 47, 72);
+	font-weight: bold;
+	text-transform: uppercase;  
+	text-align: center;
+	margin-bottom: 12px;
+}
+
+input[type='text'], input[type='tel']{
+	display: block;
+	border-width: 1px;
+	border-color: rgb(12, 67, 112);
+	border-style: solid;
+	border-radius: 5px;
+	width: 298px;
+	height: 54px;
+	margin-bottom: 8px;
+	font-size: 21px;
+	font-family: "Roboto";
+	color: rgba(18, 47, 72, 0.9);
+	text-align: center;
+	box-shadow: none;
+}
+
+
+.send-button{
+	background:none;
+	border:none;
+	display: block;
+	border-radius: 5px;
+	background-image: -moz-linear-gradient( -90deg, rgb(22,96,166) 0%, rgb(11,67,120) 100%);
+	background-image: -webkit-linear-gradient( -90deg, rgb(22,96,166) 0%, rgb(11,67,120) 100%);
+	background-image: -ms-linear-gradient( -90deg, rgb(22,96,166) 0%, rgb(11,67,120) 100%);
+	box-shadow: 0px 8px 12px 0px rgba(40, 47, 57, 0.35);
+	width: 300px;
+	height: 56px;
+	font-size: 24px;
+	font-family: "Roboto";
+	color: rgb(255, 255, 255);
+	text-align: center;
+}
+
+form.catch-data-form{
+	margin-top: 120px;
+	height: 300px;
+	width: 300px;
+	float: right;
+}
+.sale-description{
+	height:300px;
+	width: 704px;
+	float: left;
+	/* border: solid 1px black; */
+	margin-top: 115px;
+}
+.sale-bg{
+	background-image: url("../images/sale.png");
+	position: absolute;
+	width: 300px;
+	height:300px;
+	background-repeat: no-repeat;
+	background-position: center;
+	display: block;
+}
+
+#sale .caption{	
+	font-size: 36px;
+	font-family: "RobotoSlabRegular";
+	color: rgb(18, 47, 72);
+	line-height: 40px;
+	text-align: left;
+	display: block;
+}
+#sale .description-text{
+	font-size: 30px;
+	font-family: Roboto;
+	color: rgb(18, 47, 72);
+	line-height: 40px;
+	text-align: left;
+	width: 395px;
+	height: 162px;
+	display: block;
+	margin-top: 27px;
+}
+#sale .description{
+	width: 395px;
+	height: 225px;
+	float: left;
+	margin-left: 320px;
+	margin-top: 45px;
+}
+#advantages{
+	background-image: url('../images/advantages-bg.jpg');
+	width: 100%;
+	height: 680px;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+#advantages .caption{
+	font-size: 36px;
+	font-family: "RobotoSlabRegular";
+	color: rgb(18, 47, 72);
+	line-height: 40px;
+	text-align: center;
+	display: block;
+	padding-top: 110px;
+}
+#advantages .items{
+	padding-top: 69px;
+	vertical-align: middle;
+}
+#advantages .item{
+	width: 523px;
+	display: inline-block;
+	height: auto;
+	vertical-align: middle;
+}
+#advantages .advantage-icon{
+	background-image: url("../images/truck.png");
+	width: 116px;
+	height: 116px;
+	background-repeat: no-repeat;
+	background-position: center;
+	display: inline-block;
+	vertical-align: middle;
+}
+#advantages .advantage-icon2{
+	background-image: url("../images/medal.png");
+}
+#advantages .advantage-icon3{
+	background-image: url("../images/telemarketer.png");
+}
+#advantages .advantage-icon4{
+	background-image: url("../images/piggy-bank.png");
+}
+#advantages .advantage-icon5{
+	background-image: url("../images/time.png");
+}
+#advantages .advantage-icon6{
+	background-image: url("../images/list.png");
+}
+#advantages .item-caption{
+	font-size: 16px;
+	font-family: "RobotoBold";
+	color: rgb(18, 47, 72);  
+	line-height: 24px;
+	text-align: left; 
+	vertical-align: middle;	 
+}
+
+#advantages .item-description2{
+	font-size: 16px;
+	font-family: "Roboto";
+	color: rgb(18, 47, 72);
+	line-height: 24px;
+	vertical-align: middle;	
+}
+#advantages .item-textblock{
+	width: 380px;
+	display: inline-block;
+	vertical-align: middle;
+}
+#partners{
+	height: 394px;
+}
+#partners .caption{
+	font-size: 36px;
+	font-family: "RobotoSlabRegular";
+	color: rgb(18, 47, 72);
+	line-height: 40px;
+	text-align: center; 
+	padding-top: 106px; 
+}
+.part-table{
+	border-spacing: 0px;
+	padding-top: 42px;
+	margin: 0 auto;
+}
+.part-img{
+	height: 106px; 
+	/* background-color: #0c4370; */
+	width: 249px;
+	height: 106px;
+	padding-left: 120px;
+	padding-right: 120px;
+}
+.cont-textblock{
+	background-color: rgb(12, 67, 112);
+	opacity: 0.949;
+	width: 369px;
+	height: 500px;
+	z-index: 12;
+	color: #feffff;
+	padding-top: 69px;
+	padding-left: 39px;
+	padding-right: 34px;
+}
+.cont-capt{
+	font-size: 36px;
+	font-family: "RobotoSlabRegular";
+	color: rgb(255, 255, 255);
+	line-height: 40px;
+	text-align: left;
+	padding-bottom: 21px;
+}
+.adrs-capt{
+	font-size: 18px;
+	font-family: "Roboto";
+	color: rgb(254, 255, 255);
+	line-height: 24px;
+	text-align: left;
+}
+.adrs-capt:nth-child(2n){
+	padding-top: 29px;
+}
+.adrs-txt, .phone-txt, .mail-txt{
+	font-size: 24px;
+	line-height: 30px;
+}
+
+.map-container{
+	height: 0;
+	z-index: 1;
+}
+#last{
+	margin-top: 500px;
+	background-image: -moz-linear-gradient( 0deg, rgb(226,226,226) 0%, rgb(239,239,239) 49%, rgb(226,226,226) 100%);
+	background-image: -webkit-linear-gradient( 0deg, rgb(226,226,226) 0%, rgb(239,239,239) 49%, rgb(226,226,226) 100%);
+	background-image: -ms-linear-gradient( 0deg, rgb(226,226,226) 0%, rgb(239,239,239) 49%, rgb(226,226,226) 100%);
+	height: 72px;
+}
+#last .question{
+	font-size: 24px;
+	font-family: "Roboto";
+	color: rgb(18, 47, 72);
+	line-height: 1;
+	text-align: left;
+	display: block;
+	float: left;
+	margin-top: 24px;	
+}
+
+.callback-but{
+    width: 300px;
+    height: 56px;
+  	float: right;
+  	margin-top: 8px;
+
+}
+.bis-idea-caption{
+  font-size: 16px;
+  font-family: "Lato";
+  color: rgb(18, 47, 72);
+  line-height: 24px;
+  text-align: center;
+  padding-top: 4px;
+}
+#bis-idea{
+	height: 35px;
+	text-align: center;
+}
+ #bis-idea a:visited{
+	text-decoration: none;
+}
+#bis-idea a:hover{
+	text-decoration: underline;
+}
+#muki-img{
+  background-image: url("../images/product-types/muki.jpg");
+  position: absolute;
+  left: 575px;
+  top: 120px;
+  width: 541px;
+  height: 364px;
+  z-index: -1;
+  background-repeat: no-repeat;
+background-attachment: local;
+}
+#oils-img{
+  background-image: url("../images/product-types/oils.jpg");
+  position: absolute;
+  left: 650px;
+  top: 30px;
+  width: 471px;
+  height: 338px;
+  z-index: -1;
+  background-repeat: no-repeat;
+
+}
+#dry-milk-img{
+  background-image: url("../images/product-types/dry-milk.jpg");
+  position: absolute;
+  left: 770px;
+  top: 30px;
+  width: 343px;
+  height: 318px;
+  background-size: 90%;
+  z-index: -1;
+  background-repeat: no-repeat;
+}
+
+#food-adds-img{
+  background-image: url("../images/product-types/food-adds.jpg");
+  position: absolute;
+  left: 640px;
+  top: 60px;
+  width: 468px;
+  height: 327px;  
+  z-index: -1;
+  background-repeat: no-repeat;
+}
+
+#spices-mixes-img{
+  background-image: url("../images/product-types/spices-mixes.jpg");
+  position: absolute;
+  left: 600px;
+  top: -10px;
+  width: 644px;
+  height: 433px;
+  z-index: -1;
+  background-repeat: no-repeat;
+}
+#dry-grasses-img{
+  background-image: url("../images/product-types/dry-grasses.jpg");
+  position: absolute;
+  left: 400px;
+  top: 280px;
+  width: 741px;
+  height: 495px;
+  z-index: -1;
+  background-repeat: no-repeat;
+}
+#spices-img{
+  background-image: url("../images/product-types/spices.jpg");
+  position: absolute;
+  left: 518px;
+  top: 350px;
+  width: 576px;
+  height: 420px;
+  z-index: -1;
+  background-repeat: no-repeat;
+}
+
+/* теперь описание лайтбоксов */
+
+.shadow{
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+	background-color: grey;
+	filter: blur(5px);
+	position: fixed;
+	opacity: 0.5;
+	top: 0;
+	left: 0;
+	z-index: 1001;
+}
+.litebox{
+	height: 420px;
+	width: 362px;
+	border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 8px 12px 0px rgba(40, 47, 57, 0.35);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  margin-top: 10%;
+  z-index: 1002;
+  opacity: 1;
+  padding: 41px 31px;
+  padding-top: 30px;
+}
+#lb-10{
+	height: 356px;
+}
+input.lb-input{
+  border-width: 1px;
+  border-color: rgb(12, 67, 112);
+  border-style: solid;
+  border-radius: 5px;
+  width: 300px;
+  height: 54px;
+  box-shadow: none;
+}
+::-webkit-input-placeholder {color: rgba(18, 47, 72, 0.902);}
+::-moz-placeholder          {color: rgba(18, 47, 72, 0.902);}/* Firefox 19+ */
+:-moz-placeholder           {color: rgba(18, 47, 72, 0.902);}/* Firefox 18- */
+:-ms-input-placeholder      {color: rgba(18, 47, 72, 0.902);}
+input[type=text]{
+	/* box-shadow: none; */
+}
+:focus::-webkit-input-placeholder {color: transparent}
+:focus::-moz-placeholder          {color: transparent}
+:focus:-moz-placeholder           {color: transparent}
+:focus:-ms-input-placeholder      {color: transparent}
+p.lb-caption {
+  font-size: 21px;
+  font-family: "Roboto";
+  color: rgb(18, 47, 72);
+  width: 300px;
+  text-transform: uppercase;
+  line-height: 30px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+input.lb-submit{
+	background:none;
+	border:none;
+	display: block;
+	border-radius: 5px;
+	box-shadow: 0px 8px 12px 0px rgba(40, 47, 57, 0.35);
+	width: 300px;
+	height: 58px;
+	background-image: -moz-linear-gradient( -90deg, rgb(22,96,166) 0%, rgb(11,67,120) 100%);
+	background-image: -webkit-linear-gradient( -90deg, rgb(22,96,166) 0%, rgb(11,67,120) 100%);
+	background-image: -ms-linear-gradient( -90deg, rgb(22,96,166) 0%, rgb(11,67,120) 100%);
+	font-size: 20px;
+	font-family: "RobotoBold";
+	color: rgb(255, 255, 255);
+	text-align: center;
+	margin-top: 12px;
+	cursor: pointer;
+
+}
+input.lb-submit:hover, .download-button:hover, .send-button:hover{
+    background-image: -moz-linear-gradient( -90deg, rgb(19,79,136) 0%, rgb(8,49,88) 100%);
+	background-image: -webkit-linear-gradient( -90deg, rgb(19,79,136) 0%, rgb(8,49,88) 100%);
+	background-image: -ms-linear-gradient( -90deg, rgb(19,79,136) 0%, rgb(8,49,88) 100%);
+}
+input.lb-submit:active{
+	box-shadow: none;
+}
+
+.lb-close-but, .thanks-close-but{
+	background-image: url('../images/close.svg');
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	right: 7px;
+	top: 7px;
+	cursor: pointer;
+}
+.hidden{
+	display: none;
+}
+#contact-thanks{
+  font-size: 18px;
+  font-family: "Roboto";
+  color: rgb(18, 47, 72);
+  line-height: 24px;
+  text-align: center;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 8px 12px 0px rgba(40, 47, 57, 0.35);
+  position: fixed;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  margin-top: 10%;
+  z-index: 1002;
+  width: 256px;
+  height: 194px;
+  padding-top: 48px;
+}
+.con-thanks-capt{
+	margin-bottom: 20px;
+	font-family: "Roboto";
+	font-size: 30px;
+	line-height: 35px;
+	text-align: center;
+}
+
+
